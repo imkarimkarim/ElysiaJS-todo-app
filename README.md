@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-simply clone this repo, then run:  
+simply clone this repo, then run:  (you need to have [bun](https://github.com/oven-sh/bun#install) installed)
 
 ```bash
 bun dev
