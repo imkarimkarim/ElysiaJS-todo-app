@@ -1,5 +1,7 @@
 # ElysiaJS-todo-app with Bun runtime
 
+ Elysia todo api with MongoDB, Routes, Handlers, Guard and more...
+
 ## Getting Started
 
 simply clone this repo, then run:  
