@@ -12,7 +12,7 @@ export const todos = new Elysia({ prefix: '/todos' })
 		}),
 	})
 
-	// GET ALL
+	// get all
 	.get('/', () => {
 		try {
 			return Todos.find({});
@@ -21,12 +21,12 @@ export const todos = new Elysia({ prefix: '/todos' })
 		}
 	})
 
-	// GET /:ID
+	// get one
 	.get('/:id', (ctx) => {
 		return 'will show: ' + ctx.params.id;
 	})
 
-	// POST todo
+	// add one
 	.post(
 		'/',
 		(ctx) => {
@@ -43,7 +43,7 @@ export const todos = new Elysia({ prefix: '/todos' })
 		}
 	)
 
-	// PATCH todo
+	// update one
 	.patch(
 		'/:id',
 		(ctx) => {
@@ -58,7 +58,7 @@ export const todos = new Elysia({ prefix: '/todos' })
 		}
 	)
 
-	// DELETE a todo
+	// delete one
 	.delete('/:id', (ctx) => {
 		try {
 			return Todos.deleteOne({ _id: ctx.params.id });
