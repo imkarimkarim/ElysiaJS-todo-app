@@ -11,4 +11,11 @@ bun dev
 ```
 
 Open <http://localhost:3000/swagger> with your browser to see the documentation.  
+
+## MongoDB
+
+rename .env.example -> .env and then set your MongoDB connection url
+
+---
+
 for more info checkout [ElysiaJS website](https://elysiajs.com/).
