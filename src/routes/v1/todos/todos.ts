@@ -17,13 +17,17 @@ export const todos = new Elysia({ prefix: '/todos' })
 		try {
 			return Todos.find({});
 		} catch (error) {
-			console.error(error);
+			return error;
 		}
 	})
 
 	// get one
 	.get('/:id', (ctx) => {
-		return 'will show: ' + ctx.params.id;
+		try {
+			return Todos.findById(ctx.params.id);
+		} catch (error) {
+			return error;
+		}
 	})
 
 	// add one
