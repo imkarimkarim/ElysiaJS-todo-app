@@ -22,6 +22,7 @@
   "author": "imkarimkarim <imkarimkarim@pm.me> (https://karim.run/)",
   "dependencies": {
     "@bogeychan/elysia-logger": "^0.0.12",
+    "@elysiajs/cors": "^0.7.1",
     "@elysiajs/swagger": "^0.7.4",
     "elysia": "latest",
     "mongoose": "^7.6.3",

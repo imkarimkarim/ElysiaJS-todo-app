@@ -7,12 +7,14 @@ import './db/db';
 import { v1 } from './routes/v1/v1';
 import PinoPretty from 'pino-pretty';
 import packageJson from '../package.json';
+import cors from '@elysiajs/cors';
 
 const stream = PinoPretty({
 	colorize: true,
 });
 
 const app = new Elysia()
+	.use(cors())
 	.use(
 		fileLogger({
 			file: 'app.log',
