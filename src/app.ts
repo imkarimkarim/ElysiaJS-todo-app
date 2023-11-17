@@ -9,16 +9,13 @@ import packageJson from '../package.json';
 import cors from '@elysiajs/cors';
 
 const app = new Elysia()
-	// @ts-ignore
 	.use(cors())
 	.use(
-		// @ts-ignore
 		fileLogger({
-			file: 'app.log',
-		})
+			file: './app.log',
+		}).derive(({ log, ...rest }) => ({ fileLogger: log, ...rest }))
 	)
 	.use(
-		// @ts-ignore
 		swagger({
 			documentation: {
 				info: {
